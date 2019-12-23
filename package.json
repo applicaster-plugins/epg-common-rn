@@ -1,0 +1,71 @@
+{
+  "name": "@applicaster/epg-common-rn",
+  "version": "1.0.0",
+  "description": "a set of helper methods used by react native plugins screens that present epg info",
+  "main": "index.js",
+  "engine": {
+    "node": "6.9.1",
+    "npm": "4.0.2"
+  },
+  "scripts": {
+    "test": "TZ=UTC NODE_ENV=testing jest",
+    "beautify": "eslint --fix .",
+    "adb": "adb reverse tcp:8081 tcp:8081",
+    "lint": "eslint .",
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "build": "npm run build:ios && npm run build:android",
+    "build:ios": "mkdir -p tmp/build/ios && react-native bundle --platform ios --dev false --entry-file index.js --bundle-output tmp/build/ios/index.ios.bundle.js",
+    "build:android": "mkdir -p tmp/build/android && react-native bundle --platform android --dev false --entry-file index.js --bundle-output tmp/build/android/index.android.bundle.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/applicaster-plugins/epg-common-rn"
+  },
+  "author": "Applicaster",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/applicaster-plugins/epg-common-rn/issues"
+  },
+  "homepage": "https://github.com/applicaster-plugins/epg-common-rn#readme",
+  "dependencies": {
+    "react-native-device-detection": "0.2.0",
+    "react-native-zapp-bridge": "^2.7.4",
+    "axios": "^0.15.3",
+    "immutable": "^3.8.1",
+    "moment": "^2.17.1",
+    "prop-types": "^15.5.10",
+    "ramda": "^0.24.1",
+    "react": "16.8.3",
+    "react-native": "0.59.10"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-jest": "^21.2.0",
+    "babel-plugin-transform-exponentiation-operator": "^6.24.1",
+    "babel-preset-react-native": "^1.9.1",
+    "babel-register": "^6.18.0",
+    "es-beautifier": "^0.6.1",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb": "^13.0.0",
+    "eslint-plugin-babel": "^4.1.2",
+    "eslint-plugin-es-beautifier": "^1.0.1",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jest": "^21.22.0",
+    "eslint-plugin-jsx-a11y": "^2.2.3",
+    "eslint-plugin-react": "^6.10.3",
+    "eslint-plugin-react-native": "^2.3.2",
+    "jest": "^21.2.1",
+    "jest-cli": "^21.2.1",
+    "react-dom": "16.3.1"
+  },
+  "peerDependencies": {
+    "react": "*",
+    "react-native": "*",
+    "react-native-zapp-bridge": "*"
+  },
+  "jest": {
+    "verbose": true,
+    "transformIgnorePatterns": [],
+    "preset": "react-native"
+  }
+}
