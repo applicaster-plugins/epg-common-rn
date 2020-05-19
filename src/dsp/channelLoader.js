@@ -131,6 +131,7 @@ function parseChannelEntry(epgChannelId, channelEntry) {
 			isFree: 'free'
 		}),
 		imageUrl: getImageMediaItem(channelEntry) || 'placeholder_big_item',
+		model: channelEntry
 	};
 }
 	

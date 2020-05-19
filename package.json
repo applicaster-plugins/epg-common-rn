@@ -1,6 +1,6 @@
 {
   "name": "@applicaster/epg-common-rn",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "a set of helper methods used by react native plugins screens that present epg info",
   "main": "index.js",
   "engine": {
